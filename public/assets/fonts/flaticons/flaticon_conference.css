@@ -1,0 +1,206 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_conference";
+    src: url("flaticon_conference.woff2?d74e094d92fc2eb05fc7619c6b50dee5") format("woff2"),
+url("flaticon_conference.woff?d74e094d92fc2eb05fc7619c6b50dee5") format("woff"),
+url("flaticon_conference.eot?d74e094d92fc2eb05fc7619c6b50dee5") format("embedded-opentype"),
+url("flaticon_conference.ttf?d74e094d92fc2eb05fc7619c6b50dee5") format("truetype"),
+url("flaticon_conference.svg?d74e094d92fc2eb05fc7619c6b50dee5") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_conference !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-facebook-app-symbol:before {
+    content: "\f101";
+}
+.flaticon-twitter:before {
+    content: "\f102";
+}
+.flaticon-loupe:before {
+    content: "\f103";
+}
+.flaticon-shopping-bag:before {
+    content: "\f104";
+}
+.flaticon-shopping-cart:before {
+    content: "\f105";
+}
+.flaticon-check:before {
+    content: "\f106";
+}
+.flaticon-checked:before {
+    content: "\f107";
+}
+.flaticon-instagram:before {
+    content: "\f108";
+}
+.flaticon-mail:before {
+    content: "\f109";
+}
+.flaticon-location:before {
+    content: "\f10a";
+}
+.flaticon-back:before {
+    content: "\f10b";
+}
+.flaticon-next:before {
+    content: "\f10c";
+}
+.flaticon-clock:before {
+    content: "\f10d";
+}
+.flaticon-market:before {
+    content: "\f10e";
+}
+.flaticon-check-1:before {
+    content: "\f10f";
+}
+.flaticon-linkedin:before {
+    content: "\f110";
+}
+.flaticon-right:before {
+    content: "\f111";
+}
+.flaticon-down-arrow:before {
+    content: "\f112";
+}
+.flaticon-arrow:before {
+    content: "\f113";
+}
+.flaticon-sms:before {
+    content: "\f114";
+}
+.flaticon-circle:before {
+    content: "\f115";
+}
+.flaticon-bottom-right:before {
+    content: "\f116";
+}
+.flaticon-quote:before {
+    content: "\f117";
+}
+.flaticon-pin:before {
+    content: "\f118";
+}
+.flaticon-facebook:before {
+    content: "\f119";
+}
+.flaticon-linkedin-1:before {
+    content: "\f11a";
+}
+.flaticon-placeholder:before {
+    content: "\f11b";
+}
+.flaticon-location-1:before {
+    content: "\f11c";
+}
+.flaticon-plus:before {
+    content: "\f11d";
+}
+.flaticon-check-2:before {
+    content: "\f11e";
+}
+.flaticon-delete:before {
+    content: "\f11f";
+}
+.flaticon-phone-call:before {
+    content: "\f120";
+}
+.flaticon-more:before {
+    content: "\f121";
+}
+.flaticon-plus-1:before {
+    content: "\f122";
+}
+.flaticon-minus:before {
+    content: "\f123";
+}
+.flaticon-instagram-1:before {
+    content: "\f124";
+}
+.flaticon-call:before {
+    content: "\f125";
+}
+.flaticon-email:before {
+    content: "\f126";
+}
+.flaticon-maps-and-flags:before {
+    content: "\f127";
+}
+.flaticon-quotes:before {
+    content: "\f128";
+}
+.flaticon-check-3:before {
+    content: "\f129";
+}
+.flaticon-youtube:before {
+    content: "\f12a";
+}
+.flaticon-youtube-1:before {
+    content: "\f12b";
+}
+.flaticon-quote-1:before {
+    content: "\f12c";
+}
+.flaticon-email-1:before {
+    content: "\f12d";
+}
+.flaticon-conference:before {
+    content: "\f12e";
+}
+.flaticon-press-conference:before {
+    content: "\f12f";
+}
+.flaticon-seminar:before {
+    content: "\f130";
+}
+.flaticon-video-conference:before {
+    content: "\f131";
+}
+.flaticon-lecture:before {
+    content: "\f132";
+}
+.flaticon-round-table:before {
+    content: "\f133";
+}
+.flaticon-speaker:before {
+    content: "\f134";
+}
+.flaticon-seminar-1:before {
+    content: "\f135";
+}
+.flaticon-video-call:before {
+    content: "\f136";
+}
+.flaticon-conference-1:before {
+    content: "\f137";
+}
+.flaticon-conclusion:before {
+    content: "\f138";
+}
+.flaticon-conference-2:before {
+    content: "\f139";
+}
+.flaticon-agreement:before {
+    content: "\f13a";
+}
+
