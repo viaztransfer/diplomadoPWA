@@ -1,0 +1,281 @@
+.admin-courses-page {
+  padding: 40px 24px;
+  background: #f7f5ef;
+  min-height: 100vh;
+}
+
+.admin-header {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.eyebrow {
+  color: #b48a39;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-header h1 {
+  margin: 8px 0;
+  font-size: 34px;
+  color: #171717;
+}
+
+.admin-header p {
+  margin: 0;
+  color: #666;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 28px;
+}
+
+.admin-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.admin-card h2 {
+  margin-bottom: 22px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #e1ded5;
+  border-radius: 14px;
+  padding: 13px 15px;
+  font-size: 15px;
+  outline: none;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b48a39;
+  background: #fff;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.image-preview {
+  margin-bottom: 18px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 180px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.checks {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.checks label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary,
+.course-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #171717;
+  color: #fff;
+}
+
+.btn-primary:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #222;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header span {
+  background: #f4eee0;
+  color: #8a6728;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.course-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.course-item img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.course-info h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.course-info p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+}
+
+.badges span {
+  background: #eee;
+  color: #555;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badges span.active {
+  background: #dff7e8;
+  color: #14883f;
+}
+
+.badges .featured {
+  background: #fff3cf;
+  color: #a97900;
+}
+
+.course-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.course-actions button {
+  background: #f0f0f0;
+}
+
+.course-actions .danger {
+  background: #ffe0e0;
+  color: #b00020;
+}
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+  background: #fafafa;
+  border-radius: 18px;
+}
+
+@media (max-width: 992px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-item {
+    grid-template-columns: 1fr;
+  }
+
+  .course-item img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+.admin-courses-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  background: #f7f5ef;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(380px, 460px) 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.form-card,
+.list-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+input {
+  width: auto;
+}
+
+.form-row {
+  display: flex;
+}

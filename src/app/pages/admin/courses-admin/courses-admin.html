@@ -1,0 +1,173 @@
+<div class="admin-courses-page">
+
+  <div class="admin-header">
+    <div>
+      <span class="eyebrow">Administración</span>
+      <h1>Gestión de Cursos</h1>
+      <p>Crea, edita y organiza los cursos que se mostrarán en la página principal.</p>
+    </div>
+  </div>
+
+  <div class="admin-grid">
+
+    <!-- FORMULARIO -->
+    <div class="admin-card form-card">
+      <h2>{{ isEditing ? 'Editar curso' : 'Nuevo curso' }}</h2>
+
+      <form (ngSubmit)="saveCourse()">
+
+        <div class="form-group">
+          <label>Título del curso</label>
+          <input
+            type="text"
+            name="title"
+            [(ngModel)]="form.title"
+            (input)="generateSlug()"
+            required
+            placeholder="Ej: Primeros Auxilios para Guías">
+        </div>
+
+        <div class="form-group">
+          <label>Slug</label>
+          <input
+            type="text"
+            name="slug"
+            [(ngModel)]="form.slug"
+            placeholder="primeros-auxilios-para-guias">
+        </div>
+
+        <div class="form-group">
+          <label>Descripción corta</label>
+          <input
+            type="text"
+            name="short_description"
+            [(ngModel)]="form.short_description"
+            placeholder="Texto breve para tarjetas">
+        </div>
+
+        <div class="form-group">
+          <label>Descripción completa</label>
+          <textarea
+            name="description"
+            [(ngModel)]="form.description"
+            rows="4"
+            placeholder="Información completa del curso"></textarea>
+        </div>
+
+        <div class="form-row col-lg-12">
+          <div class="form-group">
+            <label>Duración</label>
+            <input
+              type="text"
+              name="duration"
+              [(ngModel)]="form.duration"
+              placeholder="40 horas">
+          </div>
+
+          <div class="form-group">
+            <label>Modalidad</label>
+            <input
+              type="text"
+              name="modality"
+              [(ngModel)]="form.modality"
+              placeholder="Presencial / Mixta">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Categoría</label>
+            <input
+              type="text"
+              name="category"
+              [(ngModel)]="form.category"
+              placeholder="Turismo">
+          </div>
+
+          <div class="form-group">
+            <label>Orden</label>
+            <input
+              type="number"
+              name="order"
+              [(ngModel)]="form.order">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Imagen del curso</label>
+          <input type="file" accept="image/*" (change)="onImageSelected($event)">
+        </div>
+
+        <div class="image-preview" *ngIf="previewImage">
+          <img [src]="previewImage" alt="Preview">
+        </div>
+
+        <div class="checks">
+          <label>
+            <input type="checkbox" name="is_featured" [(ngModel)]="form.is_featured">
+            Destacado
+          </label>
+
+          <label>
+            <input type="checkbox" name="is_active" [(ngModel)]="form.is_active">
+            Activo
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary" [disabled]="saving">
+            {{ saving ? 'Guardando...' : isEditing ? 'Actualizar curso' : 'Crear curso' }}
+          </button>
+
+          <button type="button" class="btn-secondary" *ngIf="isEditing" (click)="resetForm()">
+            Cancelar
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- LISTADO -->
+    <div class="admin-card list-card">
+      <div class="list-header">
+        <h2>Cursos registrados</h2>
+        <span>{{ courses.length }} cursos</span>
+      </div>
+
+      <div *ngIf="loading" class="empty-state">
+        Cargando cursos...
+      </div>
+
+      <div *ngIf="!loading && courses.length === 0" class="empty-state">
+        Aún no hay cursos registrados.
+      </div>
+
+      <div class="course-list" *ngIf="!loading && courses.length > 0">
+        <div class="course-item" *ngFor="let course of courses">
+          <img [src]="coursesService.getImageUrl(course)" alt="Curso">
+
+          <div class="course-info">
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.short_description }}</p>
+
+            <div class="badges">
+              <span [class.active]="course.is_active">
+                {{ course.is_active ? 'Activo' : 'Inactivo' }}
+              </span>
+
+              <span *ngIf="course.is_featured" class="featured">
+                Destacado
+              </span>
+            </div>
+          </div>
+
+          <div class="course-actions">
+            <button type="button" (click)="editCourse(course)">Editar</button>
+            <button type="button" class="danger" (click)="deleteCourse(course)">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
